@@ -180,6 +180,20 @@
             this.getEvents();
         },
         methods: {
+            async getEvents() {
+                const snapshot = await db.collection('calEvents').get();
+                let events = [];
+                snapshot.forEach((doc) => {
+                    let appData = doc.data();
+                    appData.id = doc.id;
+                    events.push(appData);
+                    }
+                );
+                this.events = events;
+            },
+            getEventColor(ev){
+                return ev.color;
+            },
             setToday() {
                 this.focus = this.today;
             },
