@@ -9,6 +9,7 @@ Vue.use(VueTextareaAutosize);
 
 Vue.config.productionTip = false;
 
+// Your web app's Firebase configuration
 firebase.initializeApp({
   apiKey: "AIzaSyDkibo5R4fIh3tUlLBkIdC4VQQcT7190Dk",
   authDomain: "vue-calendar-5f2ee.firebaseapp.com",
